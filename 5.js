@@ -1,15 +1,16 @@
-var l = new Array(10);;
-for(j=0;j<10;j++)
-  l[j]=0;
-for(var i=1;i<=10;i++){
-  //factorize this number i
-  //and note its factors
-  for(var k = 1;k<i;k++){
-    if(i%k==0)
-      l[k-1] ++;
-  }
-}
-for(j=0;j<10;j++){
-  var s=j+1;
-  console.log(s+" "+l[j]);
+var num=2520;
+while(num+=20){
+	//Check divisibility with all
+	var divisibility=true;
+	for(i=19;i>2;i--){
+		if(num%i!=0){
+			//console.log(num+" : "+i);
+			divisibility=false;
+			break;
+		}
+	}
+	if(divisibility){
+		console.log(num);
+		process.exit(0);
+	}
 }
